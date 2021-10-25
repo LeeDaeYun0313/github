@@ -1,0 +1,100 @@
+git init //시작(초기화)
+vi report.txt 만들고 내용넣고
+git add report_01  //스테이지 영역으로 옮김
+git commit -m "step1"
+
+git config --global user.email "daeyun0313@gmail.com"
+git config --global user.name "ldy"
+
+git log 
+git log -p
+git diff
+git log --all --graph
+git log --all --graph --oneline
+
+
+git status
+git commit -am "step2" // add랑 commit같이 (처음에 add따로 commit 따로 하고난 후 부터 가능)
+
+git log 해서 id찾아서
+
+git checkout c4321cas // 넣어주면 그상태로 복귀 (시간여행)
+
+git checkout main 하면 메인으로 돌아감
+
+git branch eng  //eng라는 브렌치 만들었음 (eng라는 우주)
+
+git checkout eng //eng라는 우주로 갔음
+
+git log --all --graph --oneline
+
+git merge eng
+
+git log --all --graph --oneline
+
+git reset  1dsd8ydjsv  //리셋은 커밋정보 자체를 리셋해버림 (그시점 과거갈 수 는 있지만 나머지 정보는 없앤다)
+
+1. c:\users\user\01_git\02_manual  
+2. 초기화 작업 진행
+3. manual.txt 생성
+4. 내용은 1.vpc 로 입력 후 첫번째 커밋 진행
+5. manual.txt 파일에 2.ec 라는 텍스트 입력
+6. 2두번째 커밋 진행
+7. gcp라는 브랜치 생성
+8. gcp 브랜치 이동
+9. manual_gcp.txt 생성
+10. 01.gcp_vpc 입력 후 첫번째 커밋 진행
+11. main 브랜치로 복귀 
+12. manual.txt 파일에 03.s3 입력 후 커밋 진행
+13. gcp 브랜치를 병합합니다.
+14. ls -la 명령어로 gcp 브랜치의 파일 병합했는지 확인
+15. git log --all --graph --oneline 으로 확인
+16. 중간중간 git diff, git status 등 사용하여 상태도 확인하세요.
+
+ git init
+ vi manual.txt
+ vi manual.txt
+ git add manual.txt
+ git commit -m "main_step1"
+ vi manual.txt
+ git commit -am "main_step2"
+ git branch gcp
+ git checkout gcp
+ vi manual_gcp.txt
+ git add manual_gcp.txt
+ git commit -m "gcp_step1"
+ git checkout main
+ vi manual.txt
+ git commit -am "main_step3"
+ git merge gcp
+ git log --all --graph --oneline
+ git status
+ git log
+ git log --all
+ git log --all --graph --oneline
+
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+나의 깃허브에 연동
+나의토큰: ~~~~~~~
+
+
+echo "# gittest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/LeeDaeYun0313/gittest.git
+git push -u origin main
+
+
+연결 후에 토큰 입력하고
+
+깃허브와 깃이 연동된것을 확인하고
+
+git push 하면 깃허브에 올라감
+
+
+
+
